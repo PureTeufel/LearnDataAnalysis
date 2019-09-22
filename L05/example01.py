@@ -29,3 +29,12 @@ df2['YuWen'].astype('str')
 # df2['YuWen'].astype(np.int64) 
 print(df2)
 print(df2['YuWen'])
+
+def plus(df, n, m):
+    df['new1'] = (df[u'YuWen'] + df[u'Yingyu']) * m
+    df['new2'] = (df[u'YuWen'] + df[u'Yingyu']) * n
+    return df
+
+df2 = df2.apply(plus, axis = 1, args = (2, 3, ))
+print(df2)
+print(df2.describe())

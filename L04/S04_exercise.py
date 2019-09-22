@@ -24,5 +24,7 @@ peoples[:]['total'] = peoples[:]['chinese'] + peoples[:]['english'] + peoples[:]
 # cj_sum = peoples['chinese']+peoples['english']+peoples['math']
 
 ranking = np.sort(peoples, axis = -1, kind = 'quicksort', order = 'total')
+
+
 ranking[:]['total']
 print(ranking)
